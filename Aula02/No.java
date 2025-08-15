@@ -2,8 +2,8 @@ class No<T> {
     private T dado;
     private No<T> nextNo;
 
-    public No() {
-        this(null, null);
+    public No(T dado) {
+        this(dado, null);
     }
 
     public No(T dado, No<T> nextNo) {
@@ -27,7 +27,8 @@ class No<T> {
         this.nextNo = nextNo;
     }
 
+    @Override
     public String toString(){
-    return "Dado " + getDado() + " nextNo " + getNextNo();
+    return "Dado{" + getDado() + "}";
     }
 }
